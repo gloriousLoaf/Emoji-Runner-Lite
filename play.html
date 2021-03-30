@@ -12,21 +12,71 @@
       integrity="sha512-9hj+qhrmo7MUSzKG3nwkDWncL1x8e2d1wfJxufofoBMMLXlqlqvjpT0V0blusJ8CFx9fs9Ru7ICYkVrz62Q33w=="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Emoji Runner Lite</title>
   </head>
 
   <body>
     <div class="container-fluid">
-      <div class="row justify-content-center">
-        <div class="card gameStats" id="level">
-          <span class="m-5" id="levelNum">Level 1 : Go!</span
-          ><span class="m-5" id="livesNum">Lives : 3</span>
-          <span class="m-5" id="scoreboard">Score</span>
+      <div class="d-flex justify-content-around gameStats" id="level">
+        <div id="levelNum">Level 1 : Go!</div>
+        <div id="livesNum">Lives : 3</div>
+        <div id="scoreboard">Score</div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade text-center"
+      id="game-over"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="m-3 text-center">
+            <h5 class="modal-title">Game Over</h5>
+          </div>
+          <div class="modal-body">
+            <p>Would you like to play again?</p>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button
+              type="button"
+              class="btn btn-warning"
+              data-dismiss="modal"
+              id="no"
+            >
+              No, take me home.
+            </button>
+            <button type="button" class="btn btn-success" id="yes">
+              Yes, let's roll!
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
     <script
       type="text/javascript"
       src="./game/classes/player/character.js"
