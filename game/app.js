@@ -171,9 +171,6 @@ function keyPressed() {
   // spacebar or up arrow jump
   if (key === ` ` || keyCode === UP_ARROW) {
     character.jump();
-    // triggers Jump Sound when space bar is pressed
-    // const audio = new Audio('./sounds/jump-fx.mp3');
-    // audio.play();
   }
   // fire projectiles??
   if (keyCode === 70) {
@@ -245,6 +242,5 @@ function playAgain() {
     console.log(`Game Over`);
     console.log(counter);
     StoreUserData(counter, lev);
-    window.location = '/home';
   });
 }

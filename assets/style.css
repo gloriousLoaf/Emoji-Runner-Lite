@@ -2,7 +2,7 @@
 body {
   background-image: url('./images/bg-01.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
 }
 
 /* landing page */
@@ -29,8 +29,6 @@ canvas {
   width: 750px;
   border-radius: 8px;
   padding: 0.75rem;
-  /* display: inline !important; */
-  /* -ms-display: inline; */
   margin: 3rem auto 0;
 }
 
@@ -44,8 +42,25 @@ canvas {
   text-align: center;
 }
 
+/* scoreboard */
+img#logoScores {
+  max-width: 40%;
+  margin-left: 10%;
+}
+#logoScores + p {
+  color: #fff;
+  font-size: 4rem;
+  font-family: 'Damion', cursive;
+}
+
 @media only screen and (max-width: 600px) {
   #logo + p {
     font-size: 3.5rem;
+  }
+  #logoScores {
+    min-width: 60%;
+  }
+  #logoScores + p {
+    font-size: 2.5rem;
   }
 }
