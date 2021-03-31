@@ -10,7 +10,9 @@ body {
 }
 img#logo {
   max-width: 70%;
-  margin-left: 10%;
+  /* margin-left: 10%; */
+  margin: 0 auto;
+  padding: 1rem 0 0 2rem;
 }
 #logo + p {
   color: #fd9514;
@@ -18,6 +20,29 @@ img#logo {
   font-family: 'Damion', cursive;
   padding-bottom: 1rem;
 }
+/* github repo link animation */
+#logo + p + p > a {
+  display: inline-block;
+}
+#logo + p + p > a:hover,
+#logo + p + p > a:focus {
+  outline: none;
+  text-decoration: none;
+  animation: linkRunner 0.6s linear;
+}
+@keyframes linkRunner {
+  0%,
+  40%,
+  100% {
+    transform: rotateZ(0deg);
+  }
+  20%,
+  60%,
+  80% {
+    transform: rotateZ(20deg);
+  }
+}
+/* launch-the-game button */
 #launch {
   transition: all 0.3s ease;
 }
