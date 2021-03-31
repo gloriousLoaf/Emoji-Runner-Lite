@@ -27,9 +27,11 @@ Runner was that logging in should not be required to play. So that is gone, and
 score tracking is just handled via `localStorage` so it will obviously go away
 if you clear your storage.
 
+**It is still a desktop-only game.** For now, at least.
+
 This version is still in **beta** but the core game is fully functional. The
 HTML & CSS are based on the Handlebars and styles of Emoji Runner. The JS
-remains largely the same, and the game engine is still [P5.js](https://p5js.org)
+remains largely the same, and the game engine is still [P5.js](https://p5js.org).
 I even left most of the beginner-coder (// this is a function) style of comments
 in place, because why not?! That was all part of the journey. I do think I'll
 clean it up further from here in due time, but for now enjoy!
