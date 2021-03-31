@@ -2,16 +2,18 @@
 body {
   background-image: url('./images/bg-01.jpg');
   background-size: cover;
-  /* background-repeat: no-repeat; */
 }
 
 /* landing page */
+#logoCard {
+  border-radius: 1%;
+}
 img#logo {
   max-width: 70%;
   margin-left: 10%;
 }
 #logo + p {
-  color: #fff;
+  color: #fd9514;
   font-size: 8rem;
   font-family: 'Damion', cursive;
   padding-bottom: 1rem;
@@ -52,10 +54,10 @@ canvas {
 /* scoreboard */
 img#logoScores {
   max-width: 40%;
-  margin-left: 10%;
+  margin: 0 auto;
 }
 #logoScores + p {
-  color: #fff;
+  color: #fd9514;
   font-size: 4rem;
   font-family: 'Damion', cursive;
 }
