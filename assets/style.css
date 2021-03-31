@@ -16,6 +16,13 @@ img#logo {
   font-family: 'Damion', cursive;
   padding-bottom: 1rem;
 }
+#launch {
+  transition: all 0.3s ease;
+}
+#launch:hover,
+#launch:focus {
+  transform: scale(0.95);
+}
 
 /* game */
 canvas {
@@ -51,6 +58,9 @@ img#logoScores {
   color: #fff;
   font-size: 4rem;
   font-family: 'Damion', cursive;
+}
+.col-sm-12 p {
+  font-size: 1rem;
 }
 
 @media only screen and (max-width: 600px) {

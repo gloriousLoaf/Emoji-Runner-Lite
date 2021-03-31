@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 // loop soundtrack for game
 const beat = new Audio('./game/sounds/soundtrack.mp3');
 // if it ends, reset the playback position to beginning
@@ -19,9 +17,12 @@ let character;
 let enemies = [];
 let backImg;
 let levelCounter = 0;
-const characterBlinkDur = 0.1; // duration in seconds of a single blink during Characters invisibility
-const characterExplode = 0.3; // duration of the Characters explosion in seconds
-const characterInv = 3; // duration of the Characters invisibility in seconds
+// duration in seconds of a single blink during Characters invisibility
+const characterBlinkDur = 0.1;
+// duration of the Characters explosion in seconds
+const characterExplode = 0.3;
+// duration of the Characters invisibility in seconds
+const characterInv = 3;
 
 // adjust file name & path for images & uncomment
 function preload() {
@@ -106,7 +107,7 @@ let lev = 1;
 let i = 0;
 const levMsg = ['Yeah!', 'Woo!', 'Cool!', 'Nice!', 'Hot!'];
 function levelBanner() {
-  // every tenth frame scroll, update lev & levMsg fof banner
+  // every tenth frame scroll, update lev & levMsg of banner
   if (
     levelCounter === 9 ||
     levelCounter === 19 ||
@@ -148,22 +149,26 @@ function scoreCounter() {
   userScore.html(counter);
 }
 
-// called by playAgain() - send score to database
+// called by playAgain() - save scores
+let lastResult, prevResult;
 function StoreUserData(score, level) {
-  let runner = {
+  lastResult = {
     score: score,
     lvl: level,
   };
-  $.ajax({
-    method: 'PUT',
-    url: '/api/game',
-    data: runner,
-  }).then(function () {
-    window.location.href = '/profile';
-    setTimeout(function () {
-      location.reload();
-    }, 1000);
-  });
+  localStorage.setItem('last result', JSON.stringify(lastResult));
+
+  bestResult = JSON.parse(localStorage.getItem('best result'));
+  // will need another condition for shooting and / or point loss on death
+  // right now it's not possible to beat your high score without also
+  // beating your last level
+  if (
+    bestResult === null ||
+    (bestResult.score < lastResult.score && bestResult.lvl < lastResult.lvl)
+  ) {
+    bestResult = lastResult;
+    localStorage.setItem('best result', JSON.stringify(bestResult));
+  }
 }
 
 // player controls
@@ -172,10 +177,10 @@ function keyPressed() {
   if (key === ` ` || keyCode === UP_ARROW) {
     character.jump();
   }
-  // fire projectiles??
-  if (keyCode === 70) {
-    character.shoot(); // not real yet
-  }
+  // fire projectiles?? not real yet
+  // if (keyCode === 70) {
+  //   character.shoot();
+  // }
 }
 
 // vars for background scroll & lives
@@ -233,14 +238,11 @@ function playAgain() {
   $('#game-over').modal('show');
   // if player clicks yes, reload the game
   $('#yes').click(function () {
-    console.log(counter);
-    // StoreUserData(counter, lev);
+    StoreUserData(counter, lev);
     location.reload();
   });
   // no, go home (or redirect to /profile?)
   $('#no').click(function () {
-    console.log(`Game Over`);
-    console.log(counter);
     StoreUserData(counter, lev);
   });
 }
