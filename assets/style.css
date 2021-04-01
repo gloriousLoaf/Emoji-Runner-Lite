@@ -18,14 +18,13 @@ img#logo {
   color: #fd9514;
   font-size: 8rem;
   font-family: 'Damion', cursive;
-  padding-bottom: 1rem;
 }
 /* github repo link animation */
-#logo + p + p > a {
+#logo + p + p + p > a {
   display: inline-block;
 }
-#logo + p + p > a:hover,
-#logo + p + p > a:focus {
+#logo + p + p + p > a:hover,
+#logo + p + p + p > a:focus {
   outline: none;
   text-decoration: none;
   animation: linkRunner 0.6s linear;
