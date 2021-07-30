@@ -1,74 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="url" property="og:url" content="http://gloriousLoaf.github.io/Emoji-Runner-Lite/" />
-    <meta name="keywords" content="emoji, game, games, runner game, browser game" />
-    <meta name="author" content="David Metcalf" />
-    <meta name="date" content="March 11, 2021" />
-    <meta name="search_date" content="2021-03-31" />
-    <meta property="og:image" content="https://gloriousLoaf.github.io/Emoji-Runner-Lite/assets/images/Logo.png" />
-    <meta property="og:image:secure_url"
-      content="https://gloriousLoaf.github.io/Emoji-Runner-Lite/assets/images/Logo.png" />
-    <meta property="og:image:alt" content="Emoji Runner Lite" />
-    <meta property="og:image:type" content="image/png" />
-    <!-- FB OpenGraph Tags -->
-    <meta name="title" property="og:title" content="Emoji Runner Lite" />
-    <meta name="description" property="og:description"
-      content="Emoji Runner Lite is a fun demo of the original Emoji Runner app, produced in 2020 as a group project by David Metcalf, Maurice Chouamou, Chase Johnson and Kimya Fallah." />
-    <meta name="image" property="og:image"
-      content="https://gloriousLoaf.github.io/Emoji-Runner-Lite/assets/images/Logo.png" />
-    <meta name="url" property="og:url" content="https://gloriousLoaf.github.io/Emoji-Runner-Lite/" />
-    <!-- Twitter Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:creator" content="@davidmcodes" />
-    <meta name="twitter:title" content="Emoji Runner Lite" />
-    <meta name="twitter:description"
-      content="Emoji Runner Lite is a fun demo of the original Emoji Runner app, produced in 2020 as a group project by David Metcalf, Maurice Chouamou, Chase Johnson and Kimya Fallah." />
-    <meta name="twitter:image" content="https://gloriousLoaf.github.io/Emoji-Runner-Lite/assets/images/Logo.png" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/simplex/bootstrap.min.css"
-      integrity="sha512-9hj+qhrmo7MUSzKG3nwkDWncL1x8e2d1wfJxufofoBMMLXlqlqvjpT0V0blusJ8CFx9fs9Ru7ICYkVrz62Q33w=="
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/style.css" />
-    <title>Emoji Runner Lite</title>
-  </head>
-  <body>
-    <div class="container">
-      <div
-        class="d-flex flex-column justify-content-center align-items-center vh-100"
-      >
-        <div class="card" id="logoCard">
-          <img
-            src="./assets/images/Logo.png"
-            class="img-fluid"
-            alt="Emoji Runner Lite logo with grinning emoji person."
-            id="logo"
-          />
-          <p class="text-center">lite</p>
-          <p class="text-center lead font-weight-bold">
-            Desktop JavaScript Game
-          </p>
-          <p class="text-center">
-            View repo on
-            <a
-              href="https://github.com/gloriousLoaf/Emoji-Runner-Lite"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub</a
-            >
-          </p>
-        </div>
-        <a class="btn btn-light lead mt-2" href="play.html" id="launch"
-          >Click Here To Play
-          <p style="font-size: 20px">Spacebar or Up to Jump</p>
-        </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="url" property="og:url" content="http://gloriousLoaf.github.io/Emoji-Runner-Lite/" />
+  <meta name="keywords" content="emoji, game, games, runner game, browser game" />
+  <meta name="author" content="David Metcalf" />
+  <meta name="date" content="March 11, 2021" />
+  <meta name="search_date" content="2021-03-31" />
+  <meta property="og:image" content="https://gloriousLoaf.github.io/Emoji-Runner-Lite/assets/images/Logo.png" />
+  <meta property="og:image:secure_url"
+    content="https://gloriousLoaf.github.io/Emoji-Runner-Lite/assets/images/Logo.png" />
+  <meta property="og:image:alt" content="Emoji Runner Lite" />
+  <meta property="og:image:type" content="image/png" />
+  <!-- FB OpenGraph Tags -->
+  <meta name="title" property="og:title" content="Emoji Runner Lite" />
+  <meta name="description" property="og:description"
+    content="Emoji Runner Lite is a fun demo of the original Emoji Runner app, produced in 2020 as a group project by David Metcalf, Maurice Chouamou, Chase Johnson and Kimya Fallah." />
+  <meta name="image" property="og:image"
+    content="https://gloriousLoaf.github.io/Emoji-Runner-Lite/assets/images/Logo.png" />
+  <meta name="url" property="og:url" content="https://gloriousLoaf.github.io/Emoji-Runner-Lite/" />
+  <!-- Twitter Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@davidmcodes" />
+  <meta name="twitter:title" content="Emoji Runner Lite" />
+  <meta name="twitter:description"
+    content="Emoji Runner Lite is a fun demo of the original Emoji Runner app, produced in 2020 as a group project by David Metcalf, Maurice Chouamou, Chase Johnson and Kimya Fallah." />
+  <meta name="twitter:image" content="https://gloriousLoaf.github.io/Emoji-Runner-Lite/assets/images/Logo.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/simplex/bootstrap.min.css"
+    integrity="sha512-9hj+qhrmo7MUSzKG3nwkDWncL1x8e2d1wfJxufofoBMMLXlqlqvjpT0V0blusJ8CFx9fs9Ru7ICYkVrz62Q33w=="
+    crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  <title>Emoji Runner Lite</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="d-flex flex-column justify-content-center align-items-center vh-100">
+      <div class="card" id="logoCard">
+        <img src="./assets/images/Logo.png" class="img-fluid" alt="Emoji Runner Lite logo with grinning emoji person."
+          id="logo" />
+        <p class="text-center">lite</p>
+        <p class="text-center lead font-weight-bold">
+          Desktop JavaScript Game
+        </p>
+        <p class="text-center">
+          View repo on
+          <a href="https://github.com/gloriousLoaf/Emoji-Runner-Lite" target="_blank"
+            rel="noopener noreferrer">GitHub</a>
+        </p>
       </div>
+      <a class="btn btn-light lead mt-2 launch" href="play.html" id="launch">Click Here To Play
+        <p style="font-size: 20px">Spacebar or Up to Jump</p>
+      </a>
+      <a class="btn btn-light lead mt-2 launch" href="http://emoji-runner.herokuapp.com" id="launch">
+        <p style="font-size: 20px">Visit original Emoji Runner game</p>
+      </a>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
