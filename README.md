@@ -14,9 +14,7 @@ MySQL on the back. As a group project in the middle of a crazy fast-paced boot
 camp, there are features that were never completed. Still, it is quite fun!
 
 You can view the repo for the full version
-[here](https://github.com/gloriousLoaf/Emoji-Runner),  
-and you can play the original game deployed on
-[Heroku](http://emoji-runner.herokuapp.com/).
+[here](https://github.com/gloriousLoaf/Emoji-Runner).
 
 ## Why did I make a Lite version?
 
@@ -32,7 +30,7 @@ if you clear your storage.
 This version is still in **beta** but the core game is fully functional. The
 HTML & CSS are based on the Handlebars and styles of Emoji Runner. The JS
 remains largely the same, and the game engine is still [P5.js](https://p5js.org).
-I even left most of the beginner-coder (// this is a function) style of comments
+I even left most of the beginner-coder (`// this is a function`) style of comments
 in place, because why not?! That was all part of the journey. I do think I'll
 clean it up further from here in due time, but for now enjoy!
 
